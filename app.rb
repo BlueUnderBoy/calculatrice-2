@@ -36,7 +36,7 @@ end
 get("/wizard_multiply") do
   @first_num = params.fetch("first_num").to_f
   @second_num = params.fetch("second_num").to_f
-  @result = @first_num * @second_num
+  @result = (@first_num * @second_num).to_f
   erb(:mult_result)
 end
 
@@ -47,6 +47,6 @@ end
 get("/wizard_divide") do
   @first_num = params.fetch("first_num").to_f
   @second_num = params.fetch("second_num").to_f
-  @result = @first_num / @second_num
+  @result = (@first_num / @second_num).to_f
   erb(:div_result)
 end
